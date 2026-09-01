@@ -2,3 +2,14 @@ import atletas.*
 import elementos.*
 import disciplinas.*
 
+describe "Tests victoria" {
+    test "Victoria se quiere parecer a Pareto (que mide 150cm), practica judo y necesita un judogi." {
+        victoria.cambiarAltura(150)
+        victoria.cambiarDisciplina(judo)
+        victoria.cambiarElemento(judogi)
+
+        assert.equals(victoria.disciplina(), judo)
+        assert.equals(victoria.elemento(), judogi)
+        assert.equals(victoria.altura(), 150)
+    }
+}
